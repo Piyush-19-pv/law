@@ -1,0 +1,179 @@
+/* General Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+p {
+    line-height: 1.8;
+    color: #555;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* About Us Section Styling */
+.about-us {
+    width: 85%;
+    margin: 0 auto;
+    padding: 50px 25px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+/* Chairman's Section Styling */
+.chairman-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 30px;
+    background-color: #ecf0f1;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.chairman-image {
+    max-width: 250px;
+    border-radius: 50%;
+    margin-right: 30px;
+    transition: transform 0.5s ease;
+}
+
+.chairman-image:hover {
+    transform: scale(1.1);
+}
+
+.chairman-message {
+    max-width: 700px;
+}
+
+.chairman-message h2 {
+    font-size: 2rem;
+    color: #2980b9;
+    margin-bottom: 10px;
+}
+
+/* Vice Principal's Section Styling */
+.vice-principal-section {
+    padding: 30px;
+    background-color: #dfe6e9;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.vice-principal-image {
+    max-width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: transform 0.5s ease;
+}
+
+.vice-principal-image:hover {
+    transform: scale(1.1);
+}
+
+.vice-principal-section p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Why Choose Us Section Styling */
+.why-choose-us-section {
+    background-color: #bdc3c7;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeInRight 2s ease-in-out;
+}
+
+.why-choose-us-section h2 {
+    font-size: 2rem;
+    color: #8e44ad;
+    margin-bottom: 20px;
+}
+
+.why-choose-us-section ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.why-choose-us-section ul li {
+    background: #8e44ad;
+    color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.why-choose-us-section ul li:hover {
+    transform: translateY(-5px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRight {
+    0% { opacity: 0; transform: translateX(-30px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .chairman-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .chairman-image {
+        margin-bottom: 20px;
+    }
+
+    .vice-principal-section, .why-choose-us-section {
+        text-align: center;
+    }
+
+    .about-us {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    .chairman-section, .vice-principal-section, .why-choose-us-section {
+        padding: 20px;
+    }
+
+    .about-us {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
