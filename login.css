@@ -1,0 +1,109 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling the login container */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #e3f2fd;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+    animation: slideIn 1s ease-in-out;
+}
+
+.login-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.login-form input:focus {
+    border-color: #42a5f5;
+    outline: none;
+    animation: inputFocus 0.5s ease-in-out;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #42a5f5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: buttonPop 0.7s ease;
+}
+
+.login-form button:hover {
+    background-color: #1e88e5;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes inputFocus {
+    from { box-shadow: 0 0 10px rgba(66, 165, 245, 0.5); }
+    to { box-shadow: none; }
+}
+
+@keyframes buttonPop {
+    from { transform: scale(0.9); }
+    to { transform: scale(1); }
+}
+
+/* Media Query for smaller devices */
+@media (max-width: 600px) {
+    .login-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .login-form input {
+        padding: 8px;
+    }
+
+    .login-form button {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}

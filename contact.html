@@ -1,0 +1,72 @@
+
+<!-- templates/contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Aggarwal Law College of Women</title>
+    <link rel="stylesheet" href="css/contact.css">
+   
+
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Aggarwal Law College of Women</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="admission.html">Admission</a></li>
+                <li><a href="our_blogs.html">Our Blogs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-section">
+        <div class="container">
+            <h1 class="section-title">Contact Us</h1>
+            <div class="contact-content">
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h2>Get in Touch</h2>
+                    <form action="{% url 'contact_submit' %}" method="POST">
+                       
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info and Map -->
+                <div class="contact-info">
+                    <h2><a href="tel:+919999345707">+91 9999345707</a>, <a href="tel:+919466667809">9466667809</a></h2>
+                    <p><strong>Address:</strong>  Aggarwal Law College of Women, Near Ambedkar Chowk, Tigoan Road, Ballabgarh, Faridabad-121004</p>
+                    <p><strong>Email:</strong> <a href="mailto:avpsblb01115@gmail.com">avpsblb01115@gmail.com</a></p>
+
+                    
+                    <!-- Google Map -->
+                    <div class="map">
+                        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18... (https://maps.app.goo.gl/SRfoXEhfFJEZrEJdA)" width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2450.839847707028!2d77.32228169999999!3d28.339157800000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdb99c016c215%3A0x98368e1d353eb5af!2sAggarwal%20College%20Ballabgarh!5e1!3m2!1sen!2sus!4v1727096931750!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
